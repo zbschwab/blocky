@@ -8,7 +8,7 @@ import com.gamewerks.blocky.util.Position;
 
 public class Piece {
     
-    private static HashMap ROTATION_DATA = null;
+    private static HashMap<PieceKind, boolean[][][]> ROTATION_DATA = null;
     
     static {
         try {
