@@ -28,7 +28,7 @@ public class BlockyGame {
         }
     }
     
-    private void processMovement() {
+    private void processMovement() {  // !! unused method
         Position nextPos;
         switch(movement) {
         case NONE:

@@ -3,7 +3,7 @@ package com.gamewerks.blocky;
 import java.awt.Rectangle;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
+import java.awt.event.KeyListener;  // note: unused library
 
 import javax.swing.JFrame;
 
