@@ -34,7 +34,7 @@ public class Loader {
         return data;
     }
     
-    public static HashMap loadAllRotationData() throws IOException {
+    public static HashMap<PieceKind, boolean[][][]> loadAllRotationData() throws IOException {
         HashMap<PieceKind, boolean[][][]> ret = new HashMap<>();
         for (int i = 0; i < PieceKind.ALL.length; i++) {
             PieceKind piece = PieceKind.ALL[i];
