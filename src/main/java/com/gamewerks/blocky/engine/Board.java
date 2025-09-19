@@ -63,10 +63,10 @@ public class Board {
         }
     }
     
-    public void deleteRows(List rows) {
+    public void deleteRows(List<Board> rows) {
         for (int i = 0; i < rows.size(); i++) {
-            int row = (Integer) rows.get(i);
-            deleteRow(row);
+            //int row = (Integer) rows.get(i);
+            //deleteRow(row);
         }
     }
     
@@ -78,11 +78,11 @@ public class Board {
         return isCompleted;
     }
     
-    public List getCompletedRows() {
-        List completedRows = new LinkedList();
+    public List<Board> getCompletedRows() {
+        List<Board> completedRows = new LinkedList<>();
         for (int row = 0; row < Constants.BOARD_HEIGHT; row++) {
             if (isCompletedRow(row)) {
-                completedRows.add(well[row]);
+                //completedRows.add(well[row]);
             }
         }
         return completedRows;
