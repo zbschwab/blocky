@@ -1,0 +1,19 @@
+TO-DO:
+1. shuffle method (using fisher-yates alg)
+2.
+3. fill out README
+4. copy/paste git log output into README
+
+game reqs:
+- array containing 
+  - all possible block types
+  - (as a piece of state) current array index
+- shuffle array contents
+- when you get a random block type, return piece corresponding
+  to current index and then increment index
+- when last piece has been returned
+  - reshuffle array
+  - reset current index
+
+note: we never randomly generate 2 block types before
+      generating all other kinds first!
