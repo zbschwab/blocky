@@ -2,6 +2,7 @@ package com.gamewerks.blocky.engine;
 
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.Random;
 
 import com.gamewerks.blocky.util.Loader;
 import com.gamewerks.blocky.util.Position;
@@ -47,6 +48,21 @@ public class Piece {
         } else {
             int k = orientation - 1;
             orientation = k < 0 ? 3 : k;
+        }
+    }
+
+    /**
+     * uses durstenfeld's fisher-yates alg to shuffle piece kinds in place
+     * @param pieces
+     */
+    public void shuffle(Piece[] pieces) {
+        for (int i = 6; i > 0; i--) {
+            Random rand = new Random();
+            int j = rand.nextInt(i+1);
+            Piece temp = pieces[i];
+
+            pieces[i] = pieces[j];
+            pieces[j] = temp;
         }
     }
 }
