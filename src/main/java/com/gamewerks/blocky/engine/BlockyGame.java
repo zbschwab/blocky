@@ -83,5 +83,9 @@ public class BlockyGame {
         this.movement = movement;
         processMovement();     
     } 
+    public PieceKind getPieceKind() {
+        
+    }
+
     public void rotatePiece(boolean dir) { activePiece.rotate(dir); }
 }
