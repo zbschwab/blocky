@@ -28,7 +28,7 @@ public class BlockyGame {
         }
     }
     
-    private void processMovement() {  // !! unused method
+    private void processMovement() {
         Position nextPos;
         switch(movement) {
         case NONE:
@@ -78,6 +78,9 @@ public class BlockyGame {
     }
     
     public Piece getActivePiece() { return activePiece; }
-    public void setDirection(Direction movement) { this.movement = movement; }
+    public void setDirection(Direction movement) { 
+        this.movement = movement;
+        processMovement();     
+    } 
     public void rotatePiece(boolean dir) { activePiece.rotate(dir); }
 }
