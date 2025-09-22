@@ -50,24 +50,4 @@ public class Piece {
             orientation = k < 0 ? 3 : k;
         }
     }
-
-    /**
-     * uses durstenfeld's fisher-yates alg to shuffle piece kinds in place
-     * @param pieces
-     */
-    public void shuffle(Piece currentPiece) {
-        int cur = currentPiece.kind.ordinal();
-        PieceKind[] pieces = PieceKind.ALL;
-        
-        for (int i = cur; i > (cur - 6); i--) {
-            Random rand = new Random();
-            int j = rand.nextInt(i+1);
-            PieceKind temp = pieces[i];
-
-            pieces[i] = pieces[j];
-            pieces[j] = temp;
-        }
-    }
-
-
 }
