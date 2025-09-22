@@ -6,7 +6,7 @@ import com.gamewerks.blocky.util.Constants;
 import com.gamewerks.blocky.util.Position;
 
 public class BlockyGame {
-    private static final int LOCK_DELAY_LIMIT = 30;
+    private static final int LOCK_DELAY_LIMIT = 15;
     
     private Board board;
     private Piece activePiece;
@@ -27,7 +27,7 @@ public class BlockyGame {
     
     private void trySpawnBlock() {
         if (activePiece == null) {
-            activePiece = new Piece(getPieceKind(pieces), new Position(0, Constants.BOARD_WIDTH / 2 - 2)); //Constants.BOARD_HEIGHT - 1
+            activePiece = new Piece(getPieceKind(pieces), new Position(1, Constants.BOARD_WIDTH / 2 - 2)); //Constants.BOARD_HEIGHT - 1
             if (board.collides(activePiece)) {
                 System.exit(0);
             }

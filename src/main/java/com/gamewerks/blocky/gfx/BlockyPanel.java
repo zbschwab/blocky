@@ -20,7 +20,7 @@ public class BlockyPanel extends JPanel {
     
     public BlockyPanel(BlockyGame game) {
         width = Constants.BOARD_WIDTH * BLOCK_SIZE;
-        height = (Constants.BOARD_HEIGHT - 2) * BLOCK_SIZE;
+        height = (Constants.BOARD_HEIGHT - 1) * BLOCK_SIZE;
         this.game = game;
         setPreferredSize(new Dimension(width, height));
     }
@@ -49,7 +49,7 @@ public class BlockyPanel extends JPanel {
         for (int row = 0; row < Constants.BOARD_HEIGHT; row++) {
             for (int col = 0; col < Constants.BOARD_WIDTH; col++) {
                 if (well[row][col]) {
-                    g.fillRect(col * BLOCK_SIZE, BLOCK_SIZE * (row + 1), BLOCK_SIZE, BLOCK_SIZE);
+                    g.fillRect(col * BLOCK_SIZE, BLOCK_SIZE * (row - 1), BLOCK_SIZE, BLOCK_SIZE);
                 }
             }
         }
